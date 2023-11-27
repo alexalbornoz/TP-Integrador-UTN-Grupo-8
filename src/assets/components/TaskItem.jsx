@@ -16,13 +16,13 @@ const TaskItem = ({ task, onTaskComplete, onTaskDelete }) => {
   };
 
   return (
-    <div style={{display:"flex", alignItems:"center"}} >
-        <li>   
+    <div>
+        <li>
         {task.name}
         <button onClick={handleComplete}>Realizado <MdOutlineTaskAlt/></button>
         <button onClick={handleDelete}>Eliminar <FaRegTrashAlt/></button>
-        </li>
         { completed ? <span>✅</span> : null }
+        </li>
     </div>
   );
 };

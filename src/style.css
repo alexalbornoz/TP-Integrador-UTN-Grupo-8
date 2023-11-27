@@ -13,17 +13,26 @@
   -moz-osx-font-smoothing: grayscale;
 
 }
+
+.mainContainer {
+	width: 70%;
+	margin: 0 auto;
+}
+
 h1 {
   font-size: 3.5em;
   line-height: 2;
   text-align: center;
 }
 h2 {
-  font-size: 2.5em;
+  font-size: 3em;
   line-height: 1;
+  text-align: center;
 }
 ol, li {
   font-size: 16px;
+  margin: 0px;
+  padding-inline-start: 20px;
 }
 button, input {
   border-radius: 8px;
@@ -36,8 +45,8 @@ button, input {
   cursor: pointer;
   transition: border-color 0.25s;
   margin: 10px;
-  
 }
+
 input {
   margin: 10px;
   
@@ -63,13 +72,28 @@ button:focus-visible {
   }
 }
 .container {
-  max-width: 800px;
+  /*max-width: 800px;
   padding: 20px;
   margin-left: 250px;
   display: flex;
   flex-direction: column; /* Cambia a columna para apilar verticalmente los elementos */
-  align-items: center;
+  align-items: start;
+  display: flex;
+  justify-content: space-evenly;
 }
+
 .button-container {
   margin-bottom: 10px; /* Espacio entre los botones y el siguiente elemento */
+}
+
+.taskBox {
+  background: #213547;
+  padding: 0px 25px 25px 25px;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 1500px) {
+  .container {
+    display: block;
+  }
 }
