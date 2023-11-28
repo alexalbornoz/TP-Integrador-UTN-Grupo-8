@@ -2,8 +2,6 @@
 
 Integrantes:
 
-    -Estefanía Galante
     -Florencia Valor
     -Nicolas Muratona
-    -Matias Campopiano
     -Alexis Nahuel Albornoz
