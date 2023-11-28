@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import TaskForm from "../components/TaskForm";
 import TaskList from "../components/TaskList";
+import { LuCalendarClock } from "react-icons/lu";
+import { FaRegCalendarCheck } from "react-icons/fa";
 const STORAGE_KEY = "tasks";
 const COMPLETED_STORAGE_KEY = "completedTasks";
 
@@ -52,8 +54,7 @@ export default function TasksViews() {
   const incompleteTasks = tasks.filter((task) => !task.completed);
 
   return (
-    <div>
-      <h1>Bienvenido a nuestra...</h1>
+    <div className="mainContainer">
       <h2>
         <marquee behavior="Alternate" direction="left">
           ¡Lista de Tareas!
@@ -62,17 +63,17 @@ export default function TasksViews() {
           <div className="button-container" style={{display:"flex", justifyContent:"center"}}>
             <TaskForm onTaskAdd={handleTaskAdd} />
           </div>
-      <div className="Container" style={{display:"flex", justifyContent:"space-evenly"}}>
-        <div className="containerLeft">
-            <h2>Tareas disponibles</h2>
+      <div className="container">
+        <div className="taskBox">
+            <h2><LuCalendarClock style={{color: 'darkorange'}} /> Tareas disponibles</h2>
             <TaskList
               tasks={incompleteTasks}
               onTaskComplete={handleTaskComplete}
               onTaskDelete={handleTaskDelete}
             />
         </div>
-        <div className="containerCompleted">
-          <h2>Tareas completas</h2>
+        <div className="taskBox">
+          <h2><FaRegCalendarCheck style={{color: 'green'}} /> Tareas completas</h2>
           <TaskList
             tasks={completed}
             onTaskComplete={handleTaskComplete}
